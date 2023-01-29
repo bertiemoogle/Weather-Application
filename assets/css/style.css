@@ -1,3 +1,13 @@
-#grad {
+#gradient {
     background-image: linear-gradient(to right, rgb(97, 100, 186) , rgb(4, 4, 109));
-  }
+}
+
+#today {
+    border: solid black 1px;
+    height: 300px;
+}
+
+.card {
+    width: 12rem;
+    margin: 2px;
+}

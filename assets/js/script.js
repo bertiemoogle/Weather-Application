@@ -2,7 +2,7 @@ const apiKey = "032156b075050ee7d43e1bf4ebcd4df6";
 
 let latitude;
 let longitude;
-let city = "manchester";
+let city = "berlin";
 let response;
 let queryURL1 = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=5&appID=" + apiKey;
 
@@ -22,9 +22,9 @@ fetch(queryURL1)
         console.log(queryURL2);
         console.log(response);
     });
-    
-    
 });
+
+$("card").css.width = "15rem";
 
 
 //   celciusTemp = Math.floor(temp - 273.15);
