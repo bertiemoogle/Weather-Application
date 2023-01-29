@@ -2,14 +2,29 @@
     background-image: linear-gradient(to right, rgb(97, 100, 186) , rgb(4, 4, 109));
 }
 
-h1 {
-    font-size: 3rem !important;
+#city {
+    font-size: 4rem !important;
+    padding-right: 20px;
+}
+
+#date {
+    padding-right: 20px;
+    font-size: 2rem;
 }
 
 #temp,
 #wind,
 #humid {
     padding: 10px 10px 10px 20px;
+}
+
+#weather-icon {
+    max-width: 75px;
+}
+
+.card-img-top {
+    max-width: 75px;
+    margin: 0 auto;
 }
 
 #today {
