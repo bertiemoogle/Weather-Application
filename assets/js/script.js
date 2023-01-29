@@ -21,10 +21,24 @@ fetch(queryURL1)
     .then(function(response) {
         console.log(queryURL2);
         console.log(response);
+
+        let temp = response.list[0].main.temp;
+        let celciusTemp = Math.floor(temp - 273.15)
+
+        let wind = response.list[0].wind.speed;
+
+        let humidity = response.list[0].main.humidity;
+
+        document.querySelector("#temp").innerHTML = "Temp: " + celciusTemp + "℃";
+        document.querySelector("#wind").innerHTML = "Wind: " + wind + "mph";
+        document.querySelector("#humid").innerHTML = "Humidity: " + humidity;
+
     });
+
+
 });
 
-$("card").css.width = "15rem";
+
 
 
 //   celciusTemp = Math.floor(temp - 273.15);

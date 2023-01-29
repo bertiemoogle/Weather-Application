@@ -2,9 +2,24 @@
     background-image: linear-gradient(to right, rgb(97, 100, 186) , rgb(4, 4, 109));
 }
 
+h1 {
+    font-size: 3rem !important;
+}
+
+#temp,
+#wind,
+#humid {
+    padding: 10px 10px 10px 20px;
+}
+
 #today {
     border: solid black 1px;
     height: 300px;
+    margin-bottom: 20px;;
+}
+
+#location {
+    padding: 20px;
 }
 
 .card {
