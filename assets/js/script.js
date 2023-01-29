@@ -4,7 +4,8 @@ let latitude;
 let longitude;
 let weatherIcon;
 let currentDate = new Date().toJSON().slice(0, 10);
-let city = "berlin";
+// let testDate = response.list[0].dt_txt;
+let city = "mdina"; // The value of the search box
 let response;
 let queryURL1 = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=5&appID=" + apiKey;
 
@@ -45,13 +46,9 @@ fetch(queryURL1)
         document.querySelector(".card-title").innerHTML = currentDate;
 
     });
-
-
 });
 
-// let currentDate = new Date().toJSON().slice(0, 10);
-// console.log(currentDate);
-
-
-//   celciusTemp = Math.floor(temp - 273.15);
-
+document.querySelector("#search-button").addEventListener("click", function(e) {
+    e.preventDefault();
+    console.log("Button was clicked");
+});
