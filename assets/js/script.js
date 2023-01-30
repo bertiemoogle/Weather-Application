@@ -3,8 +3,6 @@ const apiKey = "032156b075050ee7d43e1bf4ebcd4df6";
 let latitude;
 let longitude;
 let weatherIcon;
-let currentDate = new Date().toJSON().slice(0, 10);
-// let testDate = response.list[0].dt_txt;
 let city = "mdina"; // The value of the search box
 let response;
 let queryURL1 = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=5&appID=" + apiKey;
@@ -36,14 +34,14 @@ fetch(queryURL1)
 
         let humidity = response.list[0].main.humidity;
 
-        document.querySelector("#date").innerHTML = currentDate;
+        document.querySelector("#date").innerHTML = response.list[0].dt_txt.slice(0, 10);
         document.querySelector("#temp").innerHTML = "Temp: " + celciusTemp + "℃";
         document.querySelector("#wind").innerHTML = "Wind: " + wind + "mph";
         document.querySelector("#humid").innerHTML = "Humidity: " + humidity;
         document.querySelector("#card-one-temp").innerHTML = "Temp: " + celciusTemp + "℃";
         document.querySelector("#card-one-wind").innerHTML = "Wind: " + wind + "mph";
         document.querySelector("#card-one-humid").innerHTML = "Humidity: " + humidity;
-        document.querySelector(".card-title").innerHTML = currentDate;
+        document.querySelector(".card-title").innerHTML = response.list[0].dt_txt.slice(0, 10);
 
     });
 });
