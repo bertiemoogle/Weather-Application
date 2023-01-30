@@ -28,47 +28,36 @@ fetch(queryURL1)
         let wind = response.list[0].wind.speed;
         let humidity = response.list[0].main.humidity;
         let weatherIcon1 = response.list[0].weather[0].icon;
-        console.log(weatherIcon1);
 
         temp = response.list[8].main.temp;
         let celciusTemp2 = Math.floor(temp - 273.15)
         let wind2 = response.list[8].wind.speed;
         let humidity2 = response.list[8].main.humidity;
         let weatherIcon2 = response.list[8].weather[0].icon;
-        console.log(weatherIcon2);
 
         temp = response.list[16].main.temp;
         let celciusTemp3 = Math.floor(temp - 273.15)
         let wind3 = response.list[16].wind.speed;
         let humidity3 = response.list[16].main.humidity;
         let weatherIcon3 = response.list[16].weather[0].icon;
-        console.log(weatherIcon3);
 
         temp = response.list[24].main.temp;
         let celciusTemp4 = Math.floor(temp - 273.15)
         let wind4 = response.list[24].wind.speed;
         let humidity4 = response.list[24].main.humidity;
         let weatherIcon4 = response.list[24].weather[0].icon;
-        console.log(weatherIcon4);
 
         temp = response.list[32].main.temp;
         let celciusTemp5 = Math.floor(temp - 273.15)
         let wind5 = response.list[32].wind.speed;
         let humidity5 = response.list[32].main.humidity;
         let weatherIcon5 = response.list[32].weather[0].icon;
-        console.log(weatherIcon5);
 
         let iconURL1 = "http://openweathermap.org/img/wn/" + weatherIcon1 + "@2x.png";
         let iconURL2 = "http://openweathermap.org/img/wn/" + weatherIcon2 + "@2x.png";
         let iconURL3 = "http://openweathermap.org/img/wn/" + weatherIcon3 + "@2x.png";
         let iconURL4 = "http://openweathermap.org/img/wn/" + weatherIcon4 + "@2x.png";
         let iconURL5 = "http://openweathermap.org/img/wn/" + weatherIcon5 + "@2x.png";
-
-        console.log(iconURL1);
-        console.log(iconURL2);
-        console.log(iconURL3);
-        console.log(iconURL4);
-        console.log(iconURL5);
 
         let weatherImg = document.createElement("img");
         weatherImg.src = "http://openweathermap.org/img/wn/" + weatherIcon1 + "@2x.png";
