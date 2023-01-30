@@ -28,7 +28,7 @@
               <input class="form-input weather-search" type="text" id="search-input" placeholder="Search location here"
                 aria-labelledby="form-heading" aria-controls="today forecast" />
               <div class="input-group-append">
-                <button type="submit" onclick="cityLog()" class="btn btn-primary search-button" id="search-button" aria-label="submit search">
+                <button type="submit" class="btn btn-primary search-button" id="search-button" aria-label="submit search">
                   Search
                 </button>
                 <hr class="hr weather-hr" />
@@ -41,7 +41,7 @@
 
       <div class="col-lg-9 pb-3 five-day-display">
         <section id="today" class="mt-3" role="region" aria-live="polite">
-          <div id="location"><span id="city">Berlin</span><span id="date">Date</span><span id="conditions"></span></div>
+          <div id="location"><span id="city"></span><span id="date">Date</span><span id="conditions"></span></div>
           <div><label id="temp">Temp:</label></div>
           <div><label id="wind">Wind:</label></div>
           <div><label id="humid">Humidity:</label></div>
