@@ -6,3 +6,4 @@ I coded the majority of the app without using any Google resources, so there is 
 
 All the information printed to the page is contained in the objects returned by the API request, including the code for the weather icons, which is where I'm a bit stuck at the moment. A new search replaces the temperature, wind speed and humidity information with no problems. But the weather icons aren't replaced - a new one is just appended to the page next to the previous one. I am going to continue working on this, but submission time is fast approaching.
 
+<https://bertiemoogle.github.io/Weather-Application/>
