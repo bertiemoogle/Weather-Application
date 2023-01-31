@@ -7,6 +7,7 @@ let city;
 let response;
 let search;
 
+
 let button = document.querySelector("#search-button");
 
 document.querySelector("#search-button").addEventListener("click", function(e) {
@@ -25,7 +26,6 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
         latitude = response[0].lat;
         longitude = response[0].lon;
         document.querySelector("#city").innerHTML = city;
-
 
         let queryURL2 = (`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`);
 
@@ -67,20 +67,24 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
 
             let weatherImg = document.createElement("img");
             weatherImg.src = (`https://openweathermap.org/img/wn/${weatherIcon1}@2x.png`);
+            document.querySelector("#conditions").innerHTML = "";
             document.querySelector("#conditions").appendChild(weatherImg);
+
 
             document.querySelector("#date").innerHTML = response.list[0].dt_txt.slice(0, 10);
             document.querySelector("#temp").innerHTML = "Temp: " + celciusTemp + "℃";
             document.querySelector("#wind").innerHTML = "Wind: " + wind + "mph";
             document.querySelector("#humid").innerHTML = "Humidity: " + humidity;
+            
 
             document.querySelector("#card-one-temp").innerHTML = "Temp: " + celciusTemp + "℃";
             document.querySelector("#card-one-wind").innerHTML = "Wind: " + wind + "mph";
             document.querySelector("#card-one-humid").innerHTML = "Humidity: " + humidity;
             document.querySelector(".card-one-title").innerHTML = response.list[0].dt_txt.slice(0, 10);
-            weatherImg = document.createElement("img");
-            weatherImg.src = (`https://openweathermap.org/img/wn/${weatherIcon1}@2x.png`);
+            weatherImg.src = (`https://openweathermap.org/img/wn/${weatherIcon2}@2x.png`);
+            document.querySelector("#conditions2").innerHTML = "";
             document.querySelector("#conditions2").appendChild(weatherImg);
+            
 
             document.querySelector("#card-two-temp").innerHTML = "Temp: " + celciusTemp2 + "℃";
             document.querySelector("#card-two-wind").innerHTML = "Wind: " + wind2 + "mph";
@@ -88,6 +92,7 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             document.querySelector(".card-two-title").innerHTML = response.list[8].dt_txt.slice(0, 10);
             weatherImg = document.createElement("img");
             weatherImg.src = (`https://openweathermap.org/img/wn/${weatherIcon2}@2x.png`);
+            document.querySelector("#conditions3").innerHTML = "";
             document.querySelector("#conditions3").appendChild(weatherImg);
 
             document.querySelector("#card-three-temp").innerHTML = "Temp: " + celciusTemp3 + "℃";
@@ -96,6 +101,7 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             document.querySelector(".card-three-title").innerHTML = response.list[16].dt_txt.slice(0, 10);
             weatherImg = document.createElement("img");
             weatherImg.src = (`https://openweathermap.org/img/wn/${weatherIcon3}@2x.png`);
+            document.querySelector("#conditions4").innerHTML = "";
             document.querySelector("#conditions4").appendChild(weatherImg);
 
             document.querySelector("#card-four-temp").innerHTML = "Temp: " + celciusTemp4 + "℃";
@@ -104,6 +110,7 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             document.querySelector(".card-four-title").innerHTML = response.list[24].dt_txt.slice(0, 10);
             weatherImg = document.createElement("img");
             weatherImg.src = (`https://openweathermap.org/img/wn/${weatherIcon4}@2x.png`);
+            document.querySelector("#conditions5").innerHTML = "";
             document.querySelector("#conditions5").appendChild(weatherImg);
 
             document.querySelector("#card-five-temp").innerHTML = "Temp: " + celciusTemp5 + "℃";
@@ -112,6 +119,7 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             document.querySelector(".card-five-title").innerHTML = response.list[32].dt_txt.slice(0, 10);
             weatherImg = document.createElement("img");
             weatherImg.src = (`https://openweathermap.org/img/wn/${weatherIcon5}@2x.png`);
+            document.querySelector("#conditions6").innerHTML = "";
             document.querySelector("#conditions6").appendChild(weatherImg);
 
 

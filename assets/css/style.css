@@ -33,27 +33,23 @@ h3 {
     padding: 10px 10px 10px 20px;
 }
 
-#weather-icon {
-    max-width: 75px;
-    padding-bottom: 20px;
+#search-input {
+    height: 38px;
 }
 
 .search-button {
     width: 310px;
     margin-left: 6px;
+    margin-top: 10px !important;
 }
 
 .search-button:hover {
     color:rgb(4, 4, 109);
 }
 
-.clear-button {
-    width: 310px;
-    margin-left: 6px;
-}
-
-.clear-button:hover {
-    color:rgb(4, 4, 109);
+.weather-hr {
+    width: 305px;
+    padding: 5px;
 }
 
 .card-img-top {
