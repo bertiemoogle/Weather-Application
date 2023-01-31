@@ -47,6 +47,15 @@ h3 {
     color:rgb(4, 4, 109);
 }
 
+.clear-button {
+    width: 310px;
+    margin-left: 6px;
+}
+
+.clear-button:hover {
+    color:rgb(4, 4, 109);
+}
+
 .card-img-top {
     max-width: 75px;
     margin: 0 auto;
