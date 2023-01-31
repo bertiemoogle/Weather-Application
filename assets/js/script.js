@@ -10,12 +10,6 @@ let button = document.getElementById("#search-button");
 
 document.querySelector("#search-button").addEventListener("click", function(e) {
     
-    // e.preventDefault();
-    $("#search-input").empty();
-});
-
-document.querySelector("#search-button").addEventListener("click", function(e) {
-    
     e.preventDefault();
     
     let search = document.querySelector("#search-input");
