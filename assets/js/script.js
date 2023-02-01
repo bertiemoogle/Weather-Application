@@ -34,6 +34,10 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
         .then(function(response) {
             console.log(queryURL2);
             console.log(response);
+
+            let historyButton = document.createElement("button");
+            historyButton.textContent = city;
+            document.querySelector("#history").prepend(historyButton);
         
             let temp = response.list[0].main.temp;
             let celciusTemp = Math.floor(temp - 273.15)
