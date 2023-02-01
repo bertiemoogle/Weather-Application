@@ -22,6 +22,8 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
     city = search.value;
 
     let queryURL1 = (`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appID=${apiKey}`);
+    
+    // Request information from Openweather API with which to search their database
 
     fetch(queryURL1)
     .then(response => response.json())
@@ -76,12 +78,12 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             let humidity5 = response.list[32].main.humidity;
             let weatherIcon5 = response.list[32].weather[0].icon;
 
-            // Place information in localStorage
+            // Place information in localStorage and retrieve information from localStorage
             
             historyButton = {
                 city : city,
-                temperature : temp,
-                windspeed : wind,
+                temp : temp,
+                wind : wind,
                 humidity : humidity
                 }
               
