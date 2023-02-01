@@ -34,7 +34,7 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
         .then(function(response) {
             console.log(queryURL2);
             console.log(response);
-
+        
             let temp = response.list[0].main.temp;
             let celciusTemp = Math.floor(temp - 273.15)
             let wind = response.list[0].wind.speed;
@@ -70,7 +70,6 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             document.querySelector("#conditions").innerHTML = "";
             document.querySelector("#conditions").appendChild(weatherImg);
 
-
             document.querySelector("#date").innerHTML = response.list[0].dt_txt.slice(0, 10);
             document.querySelector("#temp").innerHTML = "Temp: " + celciusTemp + "℃";
             document.querySelector("#wind").innerHTML = "Wind: " + wind + "mph";
@@ -81,7 +80,7 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             document.querySelector("#card-one-wind").innerHTML = "Wind: " + wind + "mph";
             document.querySelector("#card-one-humid").innerHTML = "Humidity: " + humidity;
             document.querySelector(".card-one-title").innerHTML = response.list[0].dt_txt.slice(0, 10);
-            weatherImg.src = (`https://openweathermap.org/img/wn/${weatherIcon2}@2x.png`);
+            weatherImg.src = (`https://openweathermap.org/img/wn/${weatherIcon1}@2x.png`);
             document.querySelector("#conditions2").innerHTML = "";
             document.querySelector("#conditions2").appendChild(weatherImg);
             
