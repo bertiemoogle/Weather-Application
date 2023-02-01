@@ -1,5 +1,7 @@
 const apiKey = "032156b075050ee7d43e1bf4ebcd4df6";
 
+// Define variables
+
 let latitude;
 let longitude;
 let weatherIcon;
@@ -7,6 +9,7 @@ let city;
 let response;
 let search;
 
+// Trigger the search function and get the latitude and longitude by searching for a city name
 
 let button = document.querySelector("#search-button");
 
@@ -35,12 +38,14 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             console.log(queryURL2);
             console.log(response);
 
+            // Add a dynamically generated button to the search history
+
             let historyButton = document.createElement("button");
             historyButton.textContent = city;
             document.querySelector("#history").prepend(historyButton);
 
-            
-        
+            // Get the values to display via an API request
+
             let temp = response.list[0].main.temp;
             let celciusTemp = Math.floor(temp - 273.15)
             let wind = response.list[0].wind.speed;
@@ -71,6 +76,8 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             let humidity5 = response.list[32].main.humidity;
             let weatherIcon5 = response.list[32].weather[0].icon;
 
+            // Place information in localStorage
+            
             historyButton = {
                 city : city,
                 temperature : temp,
@@ -78,7 +85,14 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
                 humidity : humidity
                 }
               
-              window.localStorage.setItem("historyButton", JSON.stringify(historyButton));
+            window.localStorage.setItem("historyButton", JSON.stringify(historyButton));
+            
+            document.querySelector("#history").addEventListener("click", function() {
+                search = window.localStorage.getItem("historyButton");
+                console.log(JSON.parse(search));
+            });
+
+            // Place weather information in the large box at the top of the page
 
             let weatherImg = document.createElement("img");
             weatherImg.src = (`https://openweathermap.org/img/wn/${weatherIcon1}@2x.png`);
@@ -90,6 +104,7 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             document.querySelector("#wind").innerHTML = "Wind: " + wind + "mph";
             document.querySelector("#humid").innerHTML = "Humidity: " + humidity;
             
+            // Place weather information on the five Bootstrap cards at the bottom of the page
 
             document.querySelector("#card-one-temp").innerHTML = "Temp: " + celciusTemp + "℃";
             document.querySelector("#card-one-wind").innerHTML = "Wind: " + wind + "mph";
@@ -99,7 +114,6 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             document.querySelector("#conditions2").innerHTML = "";
             document.querySelector("#conditions2").appendChild(weatherImg);
             
-
             document.querySelector("#card-two-temp").innerHTML = "Temp: " + celciusTemp2 + "℃";
             document.querySelector("#card-two-wind").innerHTML = "Wind: " + wind2 + "mph";
             document.querySelector("#card-two-humid").innerHTML = "Humidity: " + humidity2;
@@ -135,11 +149,6 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             weatherImg.src = (`https://openweathermap.org/img/wn/${weatherIcon5}@2x.png`);
             document.querySelector("#conditions6").innerHTML = "";
             document.querySelector("#conditions6").appendChild(weatherImg);
-
-
-
         });
     });
-
-
 });
