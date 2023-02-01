@@ -38,6 +38,8 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             let historyButton = document.createElement("button");
             historyButton.textContent = city;
             document.querySelector("#history").prepend(historyButton);
+
+            
         
             let temp = response.list[0].main.temp;
             let celciusTemp = Math.floor(temp - 273.15)
@@ -68,6 +70,15 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
             let wind5 = response.list[32].wind.speed;
             let humidity5 = response.list[32].main.humidity;
             let weatherIcon5 = response.list[32].weather[0].icon;
+
+            historyButton = {
+                city : city,
+                temperature : temp,
+                windspeed : wind,
+                humidity : humidity
+                }
+              
+              window.localStorage.setItem("historyButton", JSON.stringify(historyButton));
 
             let weatherImg = document.createElement("img");
             weatherImg.src = (`https://openweathermap.org/img/wn/${weatherIcon1}@2x.png`);
