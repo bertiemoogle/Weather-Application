@@ -8,6 +8,7 @@ let weatherIcon;
 let city;
 let response;
 let search;
+const cityArray = [];
 
 // Trigger the search function and get the latitude and longitude by searching for a city name
 
@@ -91,6 +92,8 @@ document.querySelector("#search-button").addEventListener("click", function(e) {
                 }
               
             window.localStorage.setItem("historyButton", JSON.stringify(historyButton));
+            cityArray.push(historyButton);
+            console.log(cityArray);
             
             document.querySelector("#history").addEventListener("click", function() {
                 search = window.localStorage.getItem("historyButton");
